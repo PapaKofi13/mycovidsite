@@ -9,13 +9,15 @@ import json
 
 
 def index(request):
-    getApi = requests.get('http://corona.lmao.ninja/v2/countries/ghana')
-    
-    getApi_toJson = getApi.json()
-    context = {
-        'context': getApi_toJson
-    }
-    
-    
-    return render(request, 'covidupdates/covidupdates.html',context)
+    getApi = requests.get('https://corona.lmao.ninja/v2/all')
+    data = getApi.json()
 
+    return render(request, 'covidupdates/covidupdates.html',
+    	{
+    	'cases': data['cases'] ,
+    	'active': data['active'],
+    	'deaths': data['deaths'],
+    	'todayCases': data['todayCases'],
+    	'recovered': data['recovered'],	
+    	'critical': data['critical']
+    	})  
