@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'users/bootstrap.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'users/bootstrap.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'users/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'users/util.css' %}">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top navbar-toggle" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1">
+            <div class="container">
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle">
+
+
+
+
+        <div class="col-md-8">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+
+
+    
+</body>
+
+</body>
+
+</html>
+
+
